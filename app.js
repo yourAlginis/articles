@@ -31,11 +31,11 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "mongodb+srv://alihassan:c4a@cluster0.ofav6.mongodb.net/all-data?retryWrites=true&w=majority"
+    "mongodb+srv://alginis:alginis@alginis-data.zydcxip.mongodb.net/alginis-data"
   )
   .then((result) => {
     app.listen(process.env.PORT   ||   port, () => {
-      console.log(`Example app listening at http://localhost:${port}`);
+      console.log(`Example app listening at URL {port}`);
     });
   })
 
