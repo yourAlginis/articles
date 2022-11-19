@@ -3,7 +3,7 @@
 const express = require("express");
 const app = express();
 const port = 5000;
-const helmet = require("helmet");
+//const helmet = require("helmet");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -31,7 +31,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "mongodb+srv://alginis:alginis@alginis-data.zydcxip.mongodb.net/alginis-data"
+    "mongodb+srv://alginis:alginis@alginis-data.zydcxip.mongodb.net/test"
   )
   .then((result) => {
     app.listen(process.env.PORT   ||   port, () => {
@@ -46,7 +46,7 @@ mongoose
 
 
 
-  app.use(helmet());
+ // app.use(helmet());
 
 
 
