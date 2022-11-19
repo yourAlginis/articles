@@ -2,7 +2,7 @@
 
 const express = require("express");
 const app = express();
-const port = 	8080;
+const port = 	5000;
 //const helmet = require("helmet");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -31,7 +31,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "mongodb+srv://alginis:alginis@alginis-data.zydcxip.mongodb.net/test"
+    "mongodb+srv://alginis:alginis@alginis-data.zydcxip.mongodb.net/?retryWrites=true&w=majority"
   )
   .then((result) => {
     app.listen(process.env.PORT   ||   port, () => {
