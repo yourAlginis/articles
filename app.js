@@ -31,7 +31,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    "mongodb+srv://alginis:alginis@alginis-data.zydcxip.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://alginis:<password>@alginis-data.zydcxip.mongodb.net/?retryWrites=true&w=majority"
   )
   .then((result) => {
     app.listen(process.env.PORT   ||   port, () => {
